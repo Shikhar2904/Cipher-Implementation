@@ -98,20 +98,20 @@ File Encryption
 The -f option enables file encryption/decryption.
 
 ECB file encryption:
-python main.py -e -key 000102030405060708090a0b0c0d0e0f AES ECB -f input.txt encrypted.txt
+python main.py -e -key 000102030405060708090a0b0c0d0e0f AES ECB input.txt encrypted.txt -f
 
 ECB file decryption:
-python main.py -d -key 000102030405060708090a0b0c0d0e0f AES ECB -f encrypted.txt decrypted.txt
+python main.py -d -key 000102030405060708090a0b0c0d0e0f AES ECB encrypted.txt decrypted.txt -f
 
 CBC file encryption:
-python main.py -e -key 000102030405060708090a0b0c0d0e0f AES CBC -f input.txt encrypted.txt
+python main.py -e -key 000102030405060708090a0b0c0d0e0f AES CBC input.txt encrypted.txt -f
 The program generates and displays the IV.
 Example:
 Initialisation Vector: <IV>
 Save this IV for decryption.
 
 CBC file decryption:
-python main.py -d -key 000102030405060708090a0b0c0d0e0f AES CBC -f encrypted.txt decrypted.txt -iv <IV>
+python main.py -d -key 000102030405060708090a0b0c0d0e0f AES CBC encrypted.txt decrypted.txt -f -iv <IV>
 After decryption, decrypted.txt should contain the original plaintext.
 
 
